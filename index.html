@@ -5,21 +5,57 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Global South Women in STEM Network</title>
 <style>
+/* Global Styles */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
     background-color: #0f172a;
-    color: white;
+    color: #e0e7ff;
+    line-height: 1.6;
+}
+a {
+    text-decoration: none;
 }
 header {
-    background: linear-gradient(90deg, #7c3aed, #06b6d4);
-    padding: 60px 20px;
+    position: relative;
     text-align: center;
+    color: white;
 }
-h1 {
+header img {
+    width: 100%;
+    max-height: 500px;
+    object-fit: cover;
+    filter: brightness(0.6);
+}
+header .hero-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+header h1 {
+    font-size: 3em;
     margin: 0;
-    font-size: 40px;
+    color: #7c3aed;
+    text-shadow: 0 0 10px #06b6d4;
 }
+header p {
+    font-size: 1.3em;
+    margin: 10px 0 20px 0;
+}
+.button {
+    background: linear-gradient(90deg, #7c3aed, #06b6d4);
+    padding: 12px 30px;
+    border-radius: 8px;
+    font-weight: bold;
+    color: white;
+    transition: 0.3s;
+}
+.button:hover {
+    background: linear-gradient(90deg, #06b6d4, #7c3aed);
+}
+
+/* Sections */
 section {
     padding: 60px 20px;
     max-width: 1000px;
@@ -27,39 +63,69 @@ section {
 }
 h2 {
     color: #06b6d4;
+    border-bottom: 2px solid #7c3aed;
+    display: inline-block;
+    padding-bottom: 5px;
+    margin-bottom: 30px;
 }
 .card {
     background-color: #1e293b;
     padding: 20px;
     margin: 20px 0;
     border-radius: 10px;
+    box-shadow: 0 0 10px #06b6d4;
 }
+
+/* Founder Section */
+.founders {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+.founder-card {
+    background-color: #1e293b;
+    padding: 20px;
+    border-radius: 10px;
+    width: 250px;
+    text-align: center;
+    box-shadow: 0 0 15px #7c3aed;
+}
+.founder-card img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #06b6d4;
+    margin-bottom: 10px;
+}
+
+/* Footer */
 footer {
     text-align: center;
-    padding: 30px;
+    padding: 40px 20px;
     background-color: #111827;
 }
-.button {
-    background-color: #7c3aed;
-    color: white;
-    padding: 12px 24px;
-    text-decoration: none;
-    border-radius: 5px;
-}
-.button:hover {
-    background-color: #5b21b6;
+footer a {
+    margin: 0 10px;
+    color: #7c3aed;
+    font-weight: bold;
 }
 </style>
 </head>
 <body>
 
+<!-- Hero Section -->
 <header>
-    <h1>Global South Women in STEM</h1>
-    <p>Empowering those who empower. Building technological sovereignty across the Global South.</p>
-    <br>
-    <a href="#" class="button">Join the Network</a>
+    <img src="cyberpunk-baobab.jpg" alt="Cyberpunk Baobab Tree">
+    <div class="hero-text">
+        <h1>Global South Women in STEM</h1>
+        <p>Empowering Women. Transforming Technology.</p>
+        <a href="#" class="button">Join the Network</a>
+    </div>
 </header>
 
+<!-- About Section -->
 <section>
     <h2>About the Initiative</h2>
     <p>
@@ -73,6 +139,7 @@ footer {
     </p>
 </section>
 
+<!-- Goals Section -->
 <section>
     <h2>Our Goals</h2>
     <div class="card">
@@ -83,8 +150,9 @@ footer {
     </div>
 </section>
 
+<!-- Challenges Section -->
 <section>
-    <h2>Key Challenges We Address</h2>
+    <h2>Key Challenges</h2>
     <div class="card">
         • Lack of education, rights and health access<br>
         • Infrastructure dependence on developed countries<br>
@@ -95,43 +163,27 @@ footer {
     </div>
 </section>
 
+<!-- Founders Section -->
 <section>
-    <h2>Leadership & Contributors</h2>
-
-    <div class="card">
-        <strong>Phirtia Silva – Brazil</strong><br>
-        Founder of D3S Consultoria, focused on data literacy, analytics solutions and
-        technology development for grassroots social initiatives.
+    <h2>Founders</h2>
+    <div class="founders">
+        <div class="founder-card">
+            <img src="phirtia-placeholder.jpg" alt="Phirtia Silva">
+            <h3>Phirtia Silva</h3>
+            <p>D3S Consultoria | Brazil</p>
+        </div>
+        <div class="founder-card">
+            <img src="unathi-placeholder.jpg" alt="Unathi Mbengwana">
+            <h3>Unathi Mbengwana</h3>
+            <p>NICP | South Africa</p>
+        </div>
     </div>
-
-    <div class="card">
-        <strong>Unathi Mbengwana – South Africa</strong><br>
-        CEO of NICP | Queen Elizabeth Prize for Engineering Ambassador |
-        BRICS Young Innovator | WomHub100 Woman Leading With Impact.
-    </div>
-
-    <div class="card">
-        <strong>Mekides Minlike – Ethiopia</strong><br>
-        Future Female Leader in Energy driving clean energy innovation,
-        transforming bio-waste into sustainable fuel solutions.
-    </div>
-
-    <div class="card">
-        <strong>Pamela Azanfouet – Cameroon</strong><br>
-        Founder of NKWANGTECH NGO inspiring girls, women and school dropouts
-        to pursue STEM careers.
-    </div>
-
-    <div class="card">
-        <strong>Researcher – India</strong><br>
-        Indian Institute of Technology Delhi researcher building inclusive language
-        technologies for tribal languages through Adi Vaani initiatives.
-    </div>
-
 </section>
 
+<!-- Footer -->
 <footer>
-    Global South Women in STEM Network © 2026
+    <p>Global South Women in STEM Network © 2026</p>
+    <a href="#">Twitter</a> | <a href="#">LinkedIn</a> | <a href="#">Email</a>
 </footer>
 
 </body>
