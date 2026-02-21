@@ -6,47 +6,51 @@
 <title>Global South Women in STEM Network</title>
 <style>
 /* Global Styles */
-body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+body, html {
     margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    height: 100%;
     background-color: #0f172a;
     color: #e0e7ff;
-    line-height: 1.6;
 }
-a {
-    text-decoration: none;
-}
+
+/* Hero Section */
 header {
     position: relative;
-    text-align: center;
-    color: white;
-}
-header img {
     width: 100%;
-    max-height: 500px;
-    object-fit: cover;
-    filter: brightness(0.6);
+    height: 100vh;
+    background: url('cyberpunk-baobab.png') no-repeat center center/cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
-header .hero-text {
+header::after {
+    content: '';
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    top:0; left:0; right:0; bottom:0;
+    background: rgba(15, 23, 42, 0.6); /* dark overlay */
+}
+.hero-text {
+    position: relative;
+    z-index: 1;
 }
 header h1 {
-    font-size: 3em;
+    font-size: 4em;
     margin: 0;
     color: #7c3aed;
-    text-shadow: 0 0 10px #06b6d4;
+    text-shadow: 0 0 20px #06b6d4;
 }
 header p {
-    font-size: 1.3em;
-    margin: 10px 0 20px 0;
+    font-size: 1.5em;
+    margin: 20px 0;
 }
 .button {
+    display: inline-block;
     background: linear-gradient(90deg, #7c3aed, #06b6d4);
-    padding: 12px 30px;
-    border-radius: 8px;
+    padding: 15px 35px;
+    border-radius: 10px;
     font-weight: bold;
     color: white;
     transition: 0.3s;
@@ -55,49 +59,23 @@ header p {
     background: linear-gradient(90deg, #06b6d4, #7c3aed);
 }
 
-/* Sections */
-section {
-    padding: 60px 20px;
-    max-width: 1000px;
-    margin: auto;
-}
-h2 {
-    color: #06b6d4;
-    border-bottom: 2px solid #7c3aed;
-    display: inline-block;
-    padding-bottom: 5px;
-    margin-bottom: 30px;
-}
-.card {
-    background-color: #1e293b;
-    padding: 20px;
-    margin: 20px 0;
-    border-radius: 10px;
-    box-shadow: 0 0 10px #06b6d4;
-}
-
-/* Founder Section */
-.founders {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: center;
-}
-.founder-card {
-    background-color: #1e293b;
-    padding: 20px;
-    border-radius: 10px;
-    width: 250px;
+/* CTA Section */
+.cta {
+    padding: 80px 20px;
     text-align: center;
-    box-shadow: 0 0 15px #7c3aed;
 }
-.founder-card img {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 3px solid #06b6d4;
-    margin-bottom: 10px;
+.cta h2 {
+    color: #06b6d4;
+    font-size: 2.5em;
+    margin-bottom: 40px;
+}
+.cta .card {
+    background-color: #1e293b;
+    display: inline-block;
+    padding: 25px 40px;
+    border-radius: 15px;
+    box-shadow: 0 0 15px #7c3aed;
+    font-size: 1.2em;
 }
 
 /* Footer */
@@ -117,7 +95,6 @@ footer a {
 
 <!-- Hero Section -->
 <header>
-    <img src="cyberpunk-baobab.jpg" alt="Cyberpunk Baobab Tree">
     <div class="hero-text">
         <h1>Global South Women in STEM</h1>
         <p>Empowering Women. Transforming Technology.</p>
@@ -125,58 +102,13 @@ footer a {
     </div>
 </header>
 
-<!-- About Section -->
-<section>
-    <h2>About the Initiative</h2>
-    <p>
-        The Brazilian NGO D3S Consultoria and the South African New Innovations Consulting and Projects (NICP)
-        invite women engineers, computer scientists, data scientists, AI specialists and STEM leaders from the Global South
-        to connect, collaborate and co-create the future.
-    </p>
-    <p>
-        By combining our international networks, we exchange experiences, discuss shared challenges,
-        and develop strategies to position our communities for the decades ahead.
-    </p>
-</section>
-
-<!-- Goals Section -->
-<section>
-    <h2>Our Goals</h2>
+<!-- Call-to-Action Section -->
+<section class="cta">
+    <h2>Our Mission</h2>
     <div class="card">
-        • Empower those who empower<br>
-        • Grow the Global South tech space from bottom-up<br>
-        • Women-centered exchange of strategies and leadership<br>
-        • Strengthen global positioning and technological autonomy
-    </div>
-</section>
-
-<!-- Challenges Section -->
-<section>
-    <h2>Key Challenges</h2>
-    <div class="card">
-        • Lack of education, rights and health access<br>
-        • Infrastructure dependence on developed countries<br>
-        • Limited knowledge of international power structures<br>
-        • Digital positioning and representation<br>
-        • Cross-government collaboration gaps<br>
-        • Sustainable technologies and energy transitions
-    </div>
-</section>
-
-<!-- Founders Section -->
-<section>
-    <h2>Founders</h2>
-    <div class="founders">
-        <div class="founder-card">
-            <img src="phirtia-placeholder.jpg" alt="Phirtia Silva">
-            <h3>Phirtia Silva</h3>
-            <p>D3S Consultoria | Brazil</p>
-        </div>
-        <div class="founder-card">
-            <img src="unathi-placeholder.jpg" alt="Unathi Mbengwana">
-            <h3>Unathi Mbengwana</h3>
-            <p>NICP | South Africa</p>
-        </div>
+        • Unite engineers, data scientists, AI specialists, and STEM leaders across the Global South.<br>
+        • Share strategies, experiences, and knowledge.<br>
+        • Position our communities for the decades ahead.
     </div>
 </section>
 
