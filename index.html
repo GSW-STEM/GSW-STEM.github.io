@@ -4,12 +4,9 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Global South Women in STEM Network</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
 <style>
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
+* { box-sizing: border-box; margin: 0; padding: 0; }
 
 body {
     background-image: url('https://gsw-stem.github.io/cyberpunk-baobab.png');
@@ -17,149 +14,222 @@ body {
     background-position: center;
     background-attachment: fixed;
     background-repeat: no-repeat;
-    font-family: sans-serif;
+    font-family: 'Inter', sans-serif;
+    color: #111827;
 }
 
 body::before {
     content: '';
     position: fixed;
-    top: 0; left: 0; right: 0; bottom: 0;
-    background: rgba(255, 255, 255, 0.6);
+    inset: 0;
+    background: rgba(255, 255, 255, 0.62);
     z-index: 0;
 }
 
-.content {
-    position: relative;
-    z-index: 1;
+.content { position: relative; z-index: 1; }
+
+/* ── NAV ── */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 40px;
+    background: rgba(255,255,255,0.75);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid rgba(0,0,0,0.07);
+    position: sticky;
+    top: 0;
+    z-index: 10;
 }
 
+nav .logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.1em;
+    color: #111827;
+    letter-spacing: 0.01em;
+}
+
+nav .logo span { color: #2563eb; }
+
+nav a {
+    font-size: 0.88em;
+    color: #374151;
+    text-decoration: none;
+    margin-left: 28px;
+    font-weight: 500;
+    transition: color 0.2s;
+}
+nav a:hover { color: #2563eb; }
+
+/* ── HERO ── */
 header {
-    height: 60vh;
+    height: 88vh;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
-    padding: 0 20px;
-}
-
-header .hero-text {
-    max-width: 900px;
+    padding: 0 24px;
 }
 
 header h1 {
-    font-size: 2.8em;
-    margin-bottom: 15px;
-    color: #111827;
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2.2em, 5vw, 4em);
+    line-height: 1.15;
+    color: #0f172a;
+    max-width: 720px;
+    margin-bottom: 32px;
 }
 
-header p {
-    font-size: 1.2em;
-    margin-bottom: 25px;
-    color: #374151;
-    line-height: 1.5;
-}
+header h1 span { color: #2563eb; }
 
 .button {
     display: inline-block;
     background: #2563eb;
-    padding: 12px 28px;
+    padding: 14px 36px;
     border-radius: 8px;
-    font-weight: 500;
+    font-weight: 600;
+    font-size: 0.95em;
     color: white;
     text-decoration: none;
-    transition: 0.3s;
+    letter-spacing: 0.02em;
+    transition: background 0.25s, transform 0.15s;
+    box-shadow: 0 4px 14px rgba(37,99,235,0.3);
+}
+.button:hover { background: #1d4ed8; transform: translateY(-1px); }
+
+/* ── DIVIDER ── */
+.divider {
+    width: 56px;
+    height: 3px;
+    background: #2563eb;
+    border-radius: 2px;
+    margin: 0 auto 24px;
 }
 
-.button:hover {
-    background: #1d4ed8;
-}
-
+/* ── SECTIONS ── */
 section {
-    padding: 40px 20px;
-    max-width: 1000px;
+    padding: 64px 24px;
+    max-width: 860px;
     margin: 0 auto;
 }
 
 section h2 {
+    font-family: 'Playfair Display', serif;
     font-size: 2em;
-    margin-bottom: 20px;
-    color: #111827;
+    margin-bottom: 12px;
+    color: #0f172a;
     text-align: center;
 }
 
-section .card {
-    background: rgba(255,255,255,0.85);
-    padding: 25px 35px;
-    border-radius: 12px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
-    font-size: 1.1em;
-    line-height: 1.6;
+.card {
+    background: rgba(255,255,255,0.88);
+    padding: 32px 40px;
+    border-radius: 14px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.07);
+    font-size: 1.05em;
+    line-height: 1.75;
+    color: #1f2937;
+    border: 1px solid rgba(0,0,0,0.05);
 }
 
+/* Mission bullets */
+.mission-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+.mission-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+}
+.mission-list li::before {
+    content: '→';
+    color: #2563eb;
+    font-weight: 700;
+    flex-shrink: 0;
+    margin-top: 1px;
+}
+
+/* Manifesto paragraphs */
+.manifesto p { margin-bottom: 1.2em; }
+.manifesto p:last-child { margin-bottom: 0; font-style: italic; font-weight: 500; color: #2563eb; }
+
+/* ── FOOTER ── */
 footer {
     text-align: center;
-    padding: 25px 20px;
-    background: rgba(243,244,246,0.85);
-    color: #374151;
-    font-size: 0.9em;
+    padding: 30px 24px;
+    background: rgba(240,242,245,0.9);
+    color: #4b5563;
+    font-size: 0.88em;
+    border-top: 1px solid rgba(0,0,0,0.07);
 }
 
+footer .footer-links { margin-top: 10px; }
 footer a {
-    margin: 0 10px;
+    margin: 0 12px;
     color: #2563eb;
     text-decoration: none;
+    font-weight: 500;
 }
-
-footer a:hover {
-    text-decoration: underline;
-}
+footer a:hover { text-decoration: underline; }
 </style>
 </head>
 <body>
 <div class="content">
-    <header>
-        <div class="hero-text">
-            <h1>Global South Women in STEM</h1>
-            <p>Women leading sustainable and responsible technology in the Global South. Join a growing community of innovators shaping the future.</p>
-            <a href="mailto:contato@d3sconsultoria.com.br" class="button">Contact Us</a>
+
+    <nav>
+        <div class="logo">GSW<span>-</span>STEM</div>
+        <div>
+            <a href="#mission">Mission</a>
+            <a href="#manifesto">Manifesto</a>
+            <a href="mailto:contato@d3sconsultoria.com.br">Contact</a>
         </div>
+    </nav>
+
+    <header>
+        <h1>Global South<br><span>Women in STEM</span></h1>
+        <a href="mailto:contato@d3sconsultoria.com.br" class="button">Join the Network</a>
     </header>
 
-    <section>
+    <section id="mission">
         <h2>Our Mission</h2>
+        <div class="divider"></div>
         <div class="card">
-            • Empower those who empower;<br>
-            • Grow the Global South tech space from bottom to top;<br>
-            • Women-centered: exchange experiences and strategies;<br>
-            • Position our communities for the decades ahead.
+            <ul class="mission-list">
+                <li>Empower those who empower</li>
+                <li>Grow the Global South tech space from bottom to top</li>
+                <li>Women-centered: exchange experiences and strategies</li>
+                <li>Position our communities for the decades ahead</li>
+            </ul>
         </div>
     </section>
 
-    <section>
+    <section id="manifesto">
         <h2>Our Manifesto</h2>
-        <div class="card">
-            Humanity is entering a new technological era. Artificial intelligence, advanced computing, biotechnology, and new digital infrastructures are transforming how societies function and how power is distributed in the world. Yet, at the same time, a large share of the global population still does not have access to the internet, has never used a computer, or faces deep educational gaps that prevent them from even understanding the language of technology.<br><br>
-
-            Technology is shaping the future of economies, security, knowledge production, and political power. Those who do not participate in its creation will inevitably remain dependent on those who do.<br><br>
-
-            Historically, women have been excluded from careers in the hard sciences and technological development. As a result, we are still underrepresented in the very fields that are defining the next global transformation. The problem becomes even deeper when we look at countries in the Global South, where structural inequalities limit access to high-level education, research infrastructure, and technological production.<br><br>
-
-            In this context, inclusion cannot rely only on affirmative policies. If we want women from the Global South to be part of the technological future, we need coordinated, intentional, and long-term action.<br><br>
-
-            The Global South Women in STEM (GSW-STEM) network was created with this purpose: to position ourselves for the future and strengthen our independence in knowledge production, creative capacity, technological development, and high-level education within a coalition of Global South countries.<br><br>
-
-            Our network brings together data and software engineers, computer and data scientists, CEOs from private and nonprofit initiatives, and policymakers committed to transforming the realities of their own countries. By connecting our local networks, leadership, and expertise, we aim to accelerate technological development that responds to our own contexts, challenges, and priorities.<br><br>
-
-            Brazil, Uganda, Cameroon, South Africa, India, and Ethiopia are already part of this growing network. We are building more than a professional community. We are building the capacity for Global South women to actively shape the technological future of our societies.<br><br>
-
-            And we invite other women to build this future with us.
+        <div class="divider"></div>
+        <div class="card manifesto">
+            <p>Humanity is entering a new technological era. Artificial intelligence, advanced computing, biotechnology, and new digital infrastructures are transforming how societies function and how power is distributed in the world. Yet, at the same time, a large share of the global population still does not have access to the internet, has never used a computer, or faces deep educational gaps that prevent them from even understanding the language of technology.</p>
+            <p>Technology is shaping the future of economies, security, knowledge production, and political power. Those who do not participate in its creation will inevitably remain dependent on those who do.</p>
+            <p>Historically, women have been excluded from careers in the hard sciences and technological development. As a result, we are still underrepresented in the very fields that are defining the next global transformation. The problem becomes even deeper when we look at countries in the Global South, where structural inequalities limit access to high-level education, research infrastructure, and technological production.</p>
+            <p>In this context, inclusion cannot rely only on affirmative policies. If we want women from the Global South to be part of the technological future, we need coordinated, intentional, and long-term action.</p>
+            <p>The Global South Women in STEM (GSW-STEM) network was created with this purpose: to position ourselves for the future and strengthen our independence in knowledge production, creative capacity, technological development, and high-level education within a coalition of Global South countries.</p>
+            <p>Our network brings together data and software engineers, computer and data scientists, CEOs from private and nonprofit initiatives, and policymakers committed to transforming the realities of their own countries. By connecting our local networks, leadership, and expertise, we aim to accelerate technological development that responds to our own contexts, challenges, and priorities.</p>
+            <p>Brazil, Uganda, Cameroon, South Africa, India, and Ethiopia are already part of this growing network. We are building more than a professional community. We are building the capacity for Global South women to actively shape the technological future of our societies.</p>
+            <p>And we invite other women to build this future with us.</p>
         </div>
     </section>
 
     <footer>
-        <p>Global South Women in STEM Network | Contact: contato@d3sconsultoria.com</p>
-        <a href="#">LinkedIn</a> | <a href="#">Instagram</a>
+        <p>Global South Women in STEM Network &nbsp;|&nbsp; contato@d3sconsultoria.com</p>
+        <div class="footer-links">
+            <a href="#">LinkedIn</a>
+            <a href="#">Instagram</a>
+        </div>
     </footer>
+
 </div>
 </body>
 </html>
